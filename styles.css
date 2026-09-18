@@ -37,7 +37,7 @@ h1 em{font-weight:400;color:#ae872f}
 .letter-peek{position:absolute;left:20px;top:10px;width:260px;height:150px;background:#fffcf4;border:1px solid #dfd8bf;padding-top:27px;font:italic 21px var(--serif);transition:transform .8s .45s;z-index:1}
 .letter-flower{display:block;color:#cca240;font-size:37px;margin-top:8px}
 .envelope-hint{position:absolute;bottom:0;left:0;right:0;font-size:12px;letter-spacing:1px;color:#6f603b}
-.envelope-hint>span{margin-left:6px;font-size:18px}
+.envelope-arrow{display:inline-block;width:18px;height:18px;margin-left:6px;vertical-align:middle}
 .little-note{margin:24px 0 0;font-family:var(--serif);font-size:19px;font-style:italic;color:#6c705a;line-height:1.55}
 .corner-flower{position:absolute;font-size:135px;line-height:1;color:#d5bb6629;pointer-events:none}
 .flower-left{bottom:62px;left:8%;transform:rotate(15deg)}
