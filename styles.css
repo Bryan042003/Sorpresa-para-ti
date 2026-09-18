@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap');
+
+:root{color-scheme:light;--paper:#f8f5ec;--ink:#354633;--muted:#626652;--gold:#b48d3c;--line:#dddccc;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit}
+button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:9px}
+[hidden]{display:none!important}
+.paper-grain{position:fixed;inset:0;z-index:9;pointer-events:none;opacity:.15;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%238b8069' opacity='.22' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E")}
+.masthead{max-width:1440px;margin:auto;padding:29px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:20px}
+.brand{font-size:10px;letter-spacing:2px;font-weight:600;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:12px}
+.brand>span{color:var(--gold);font-size:29px;font-weight:400;line-height:1}
+.date{font-size:11px;color:var(--muted)}
+.date>span:first-child{margin:0 9px;color:var(--gold)}
+main{overflow:hidden;min-height:calc(100svh - 160px)}
+.invitation{position:relative;text-align:center;max-width:1200px;margin:auto;padding:66px 24px 38px;transition:opacity .55s,transform .55s}
+.eyebrow{display:flex;justify-content:center;align-items:center;gap:13px;font-size:9px;font-weight:500;letter-spacing:2.4px;color:#8b794c}
+.eyebrow>span{width:30px;height:1px;background:#c8b785}
+h1{font-family:var(--serif);font-size:clamp(48px,5.5vw,76px);font-weight:400;letter-spacing:-2px;line-height:1.04;margin:24px 0 19px}
+h1 em{font-weight:400;color:#ae872f}
+.intro,.reveal-subtitle{font-size:14px;line-height:1.9;color:var(--muted)}
+.envelope-button{position:relative;display:block;width:330px;max-width:100%;height:270px;margin:37px auto 11px;padding:0;border:0;background:transparent;cursor:pointer;perspective:1100px;color:var(--ink)}
+.envelope{display:block;position:absolute;width:300px;height:184px;left:50%;top:25px;transform:translateX(-50%) rotate(-5deg);border-radius:4px;background:#d3b982;box-shadow:0 10px 20px #75603b12;transition:transform .5s}
+.envelope-button:hover .envelope{transform:translateX(-50%) rotate(-2deg) translateY(-8px)}
+.envelope-shadow{position:absolute;top:205px;left:50%;width:260px;height:22px;background:#7a643226;filter:blur(16px);border-radius:50%;transform:translateX(-50%)}
+.envelope-inside{position:absolute;inset:0;background:linear-gradient(145deg,#bba16e,#e8d6ad);clip-path:polygon(0 0,100% 0,50% 65%)}
+.envelope-front{position:absolute;inset:0;z-index:3;border-radius:3px;background:linear-gradient(32deg,#e6d2a9,#f0e2c4);clip-path:polygon(0 0,50% 52%,100% 0,100% 100%,0 100%)}
+.envelope-front:after{content:'';position:absolute;inset:0;background:linear-gradient(155deg,#f4e8ce,#e9d8b4);clip-path:polygon(0 100%,50% 43%,100% 100%)}
+.envelope-flap{position:absolute;inset:0;z-index:4;background:linear-gradient(170deg,#f1e1bd,#e4cfa3);clip-path:polygon(0 0,100% 0,50% 59%);transform-origin:top;transition:transform .8s,filter .8s}
+.wax-seal{position:absolute;z-index:5;top:84px;left:129px;width:43px;height:43px;border-radius:50%;display:grid;place-items:center;color:#f8e7b4;font:26px var(--serif);background:#bd9948;border:3px double #d7b461;box-shadow:0 3px 6px #634b2830;transition:opacity .3s,transform .4s}
+.envelope-address{position:absolute;bottom:20px;left:0;right:0;z-index:4;font:italic 24px var(--serif);color:#927b50}
+.letter-peek{position:absolute;left:20px;top:10px;width:260px;height:150px;background:#fffcf4;border:1px solid #dfd8bf;padding-top:27px;font:italic 21px var(--serif);transition:transform .8s .45s;z-index:1}
+.letter-flower{display:block;color:#cca240;font-size:37px;margin-top:8px}
+.envelope-hint{position:absolute;bottom:0;left:0;right:0;font-size:12px;letter-spacing:1px;color:#6f603b}
+.envelope-hint>span{margin-left:6px;font-size:18px}
+.little-note{margin:24px 0 0;font-family:var(--serif);font-size:19px;font-style:italic;color:#6c705a;line-height:1.55}
+.corner-flower{position:absolute;font-size:135px;line-height:1;color:#d5bb6629;pointer-events:none}
+.flower-left{bottom:62px;left:8%;transform:rotate(15deg)}
+.flower-right{top:175px;right:6%;font-size:87px;transform:rotate(-10deg)}
+.opening .envelope-flap{transform:rotateX(180deg);filter:brightness(.93);z-index:0}
+.opening .wax-seal{opacity:0;transform:scale(.7)}
+.opening .letter-peek{transform:translateY(-90px);z-index:2}
+.opening .envelope{transform:translateX(-50%) rotate(0)}
+.leaving{opacity:0;transform:translateY(-18px)}
+footer{padding:23px 20px 25px;text-align:center;font-size:9px;letter-spacing:.8px;color:#969780}
+footer>span:first-child{color:#6e775d}
+.footer-flower{display:inline-block;margin-left:9px;color:#bca051;font-size:14px;vertical-align:middle}
+.reveal{text-align:center;padding:56px 22px 24px}
+.reveal-heading{animation:arrive 1.2s both}
+.reveal h1{margin-top:22px;font-size:clamp(48px,5.2vw,70px)}
+.reveal-subtitle{margin-bottom:0}
+.bouquet-stage{position:relative;max-width:710px;margin:-15px auto 0;isolation:isolate}
+.sun-glow{position:absolute;width:80%;height:80%;left:10%;top:6%;background:radial-gradient(ellipse,#efdc8745,transparent 68%);z-index:-1}
+.bouquet{position:relative;display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 8px 8px #5b562510)}
+.stem{stroke-dasharray:700;stroke-dashoffset:700;animation:draw-stem 1.8s var(--delay) ease-out forwards}
+.leaf-cluster{transform-box:fill-box;transform-origin:50% 100%;opacity:0;animation:unfold 1.3s var(--delay) both}
+.flower-bloom{opacity:0;animation:bloom 1.6s var(--delay) cubic-bezier(.18,.72,.28,1.12) forwards}
+.flower-sway{animation:sway 6s var(--sway-delay) ease-in-out infinite;transform-origin:0 70px}
+.ribbon{opacity:0;animation:arrive 1.3s 1.6s forwards}
+.bouquet-caption{position:relative;display:block;margin-top:-28px;font:italic 20px var(--serif);color:#626e50;animation:arrive 1s 2s both}
+.floating-petals{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.floating-petals>i{position:absolute;top:-20px;left:var(--left);width:8px;height:15px;border-radius:80% 0 80% 0;background:#e9c655;opacity:0;animation:petal-fall var(--duration) var(--delay) linear infinite}
+.love-letter{position:relative;text-align:left;max-width:590px;margin:43px auto 0;padding:42px 47px 33px;border:1px solid #e0dbc8;background:#fffdf660;box-shadow:0 8px 28px #64633e04;animation:arrive 1s .5s both}
+.letter-number{font-size:9px;letter-spacing:2px;color:#a28d5e}
+.letter-decoration{position:absolute;right:39px;top:25px;font-size:41px;color:#d5b451}
+.salutation{font:italic 31px var(--serif);margin:26px 0 17px}
+.dedication p{font-size:15px;line-height:1.9;color:#535e47;margin:0 0 17px}
+.letter-ending{font:italic 23px/1.35 var(--serif);color:#9f7e33;margin:25px 0}
+.signature{font-size:12px;line-height:1.9;color:#626952}
+.signature #signature{font:italic 23px/1.5 var(--serif);color:var(--ink)}
+.signature-heart{font-size:23px;color:#b69a5d}
+.replay-button{display:inline-flex;align-items:center;gap:9px;margin:30px 0 5px;padding:12px 17px;border:1px solid #dcdaca;border-radius:30px;background:transparent;color:#62664e;font-size:12px;cursor:pointer;transition:background .2s}
+.replay-button:hover{background:#eee9da}
+.replay-button>span{font-size:18px}
+.noscript-note{padding:20px;text-align:center}
+@keyframes arrive{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@keyframes draw-stem{to{stroke-dashoffset:0}}
+@keyframes unfold{from{opacity:0;transform:scale(.15) rotate(-12deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes bloom{from{opacity:0;transform:scale(.05) rotate(-35deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes sway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
+@keyframes petal-fall{0%{opacity:0;transform:translate(0,-15px) rotate(0)}15%{opacity:.65}85%{opacity:.45}100%{opacity:0;transform:translate(60px,600px) rotate(290deg)}}
+@media(min-width:1400px){.invitation{padding-top:85px}.envelope-button{margin-top:48px}}
+@media(max-width:600px){.masthead{padding:21px 22px}.brand{font-size:8px;letter-spacing:1.5px;gap:8px}.brand>span{font-size:24px}.date{font-size:9px}.date-extra,.date>span:first-child{display:none}.invitation{padding:48px 20px 30px}.eyebrow{font-size:8px;letter-spacing:1.6px;gap:10px}.eyebrow>span{width:18px}h1{letter-spacing:-1.6px;margin-top:24px}.intro{font-size:14px}.envelope-button{margin-top:31px;width:300px;height:263px}.envelope{width:276px;height:174px}.letter-peek{width:236px}.wax-seal{left:118px;top:80px}.envelope-hint{font-size:11px}.corner-flower.flower-left{left:-29px;bottom:17px;font-size:95px}.flower-right{right:-20px;top:165px;font-size:73px}.little-note{font-size:18px}.reveal{padding:43px 14px 20px}.reveal-subtitle{font-size:14px;max-width:270px;margin:0 auto;line-height:1.8}.bouquet-stage{margin-top:8px;width:calc(100% + 24px);margin-left:-12px}.bouquet-caption{font-size:18px;margin-top:-8px}.love-letter{margin-top:32px;padding:29px 27px 25px}.letter-decoration{right:26px;top:19px}.dedication p{font-size:15px}.letter-ending{font-size:22px}footer{font-size:8px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important}.stem{stroke-dashoffset:0}.floating-petals{display:none}.flower-bloom,.leaf-cluster,.ribbon{opacity:1}}

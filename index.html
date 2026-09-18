@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f5ec" />
+    <meta name="description" content="Hay detalles que florecen para siempre. Una pequeña sorpresa, hecha con mucho amor." />
+    <title>Un pequeño detalle para ti 🌼</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./dedicatoria.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="paper-grain" aria-hidden="true"></div>
+    <header class="masthead">
+      <span class="brand"><span aria-hidden="true">✳</span> PARA TI, CON AMOR</span>
+      <span class="date">21 de septiembre <span aria-hidden="true">·</span> <span class="date-extra">Un día para florecer</span></span>
+    </header>
+
+    <main>
+      <section class="invitation" id="invitation" aria-labelledby="invitation-title">
+        <div class="eyebrow"><span></span> TENGO UNA SORPRESA PARA TI <span></span></div>
+        <h1 id="invitation-title">Hay cosas que mereces<br />recibir <em>siempre.</em></h1>
+        <p class="intro">Una sonrisa. Un poquito de amor.<br />Y unas flores amarillas que nunca se marchiten.</p>
+
+        <button class="envelope-button" id="open-envelope" aria-label="Abrir el sobre y descubrir tus flores amarillas">
+          <span class="envelope-shadow"></span>
+          <span class="envelope">
+            <span class="letter-peek"><span>Para mi persona favorita</span><span class="letter-flower">✳</span></span>
+            <span class="envelope-inside"></span>
+            <span class="envelope-front"></span>
+            <span class="envelope-flap"></span>
+            <span class="envelope-address">Para ti</span>
+            <span class="wax-seal" aria-hidden="true">♡</span>
+          </span>
+          <span class="envelope-hint">Toca el sobre para abrirlo <span aria-hidden="true">↗</span></span>
+        </button>
+        <p class="little-note">Algunas flores se regalan con las manos.<br />Estas, con todo mi corazón.</p>
+        <span class="corner-flower flower-left" aria-hidden="true">✳</span>
+        <span class="corner-flower flower-right" aria-hidden="true">✳</span>
+      </section>
+
+      <section class="reveal" id="reveal" aria-labelledby="reveal-title" hidden>
+        <div class="reveal-heading">
+          <div class="eyebrow"><span></span> ESTAS FLORES SON PARA TI <span></span></div>
+          <h1 id="reveal-title" tabindex="-1">Tú haces más bonito<br /><em>mi mundo.</em></h1>
+          <p class="reveal-subtitle">Y hoy quería regalarte un poquito de lo que tú me haces sentir.</p>
+        </div>
+        <div class="bouquet-stage">
+          <div class="sun-glow" aria-hidden="true"></div>
+          <svg class="bouquet" id="bouquet" viewBox="0 0 760 680" role="img" aria-label="Un ramo de flores amarillas, con girasoles dorados, pequeñas margaritas y hojas verdes, dedicado a ti">
+            <defs>
+              <linearGradient id="petal" x1="0" y1="1" x2="0.7" y2="0"><stop stop-color="#e3a124"/><stop offset="0.5" stop-color="#f5c843"/><stop offset="1" stop-color="#ffe785"/></linearGradient>
+              <linearGradient id="petal-light" x1="0" y1="1" x2="0.3" y2="0"><stop stop-color="#efb22e"/><stop offset="1" stop-color="#fff09e"/></linearGradient>
+              <radialGradient id="flower-heart"><stop stop-color="#67482b"/><stop offset="0.65" stop-color="#72502b"/><stop offset="1" stop-color="#a3712f"/></radialGradient>
+              <linearGradient id="leaf" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#486b43"/><stop offset="1" stop-color="#94a970"/></linearGradient>
+              <linearGradient id="ribbon" x1="0" x2="1"><stop stop-color="#c39658"/><stop offset="0.5" stop-color="#e8c68e"/><stop offset="1" stop-color="#b58a50"/></linearGradient>
+            </defs>
+            <g id="stems"></g>
+            <g id="foliage"></g>
+            <g id="flowers"></g>
+            <g class="ribbon" aria-hidden="true">
+              <path d="M376 535 Q310 495 300 525 Q296 554 377 543 Q324 557 321 583 Q360 569 383 542 Q414 570 450 577 Q441 553 389 539 Q452 551 454 522 Q445 492 385 535" fill="url(#ribbon)" stroke="#b68c54" stroke-width="1.3"/>
+              <path d="M381 540 Q365 578 370 613 L383 600 L393 611 Q385 570 390 540" fill="#d8b47c"/>
+              <ellipse cx="383" cy="539" rx="11" ry="8" fill="#ebd0a0"/>
+            </g>
+          </svg>
+          <div class="floating-petals" id="floating-petals" aria-hidden="true"></div>
+          <span class="bouquet-caption">Hechas de luz, de cariño y de ti.</span>
+        </div>
+        <article class="love-letter">
+          <span class="letter-number">21 / 09</span>
+          <span class="letter-decoration" aria-hidden="true">✳</span>
+          <p class="salutation" id="salutation">Mi amor,</p>
+          <div id="dedication" class="dedication"></div>
+          <p class="letter-ending" id="letter-ending"></p>
+          <p class="signature">Con todo mi amor,<br /><span id="signature"></span><span class="signature-heart" aria-hidden="true"> ♡</span></p>
+        </article>
+        <button class="replay-button" id="replay" type="button"><span aria-hidden="true">↺</span> Volver a abrir mi sorpresa</button>
+      </section>
+    </main>
+
+    <footer>Un detalle pequeño. <span>Un amor enorme.</span> <span class="footer-flower" aria-hidden="true">✳</span></footer>
+    <noscript><p class="noscript-note">Activa JavaScript para abrir tu sorpresa. Estas flores amarillas son para ti, con todo mi amor. 🌼</p></noscript>
+  </body>
+</html>
